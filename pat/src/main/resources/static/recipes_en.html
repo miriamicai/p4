@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Recipes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <header>
+        <img src="imagenes/titulo.png" alt="Cooking Recipes">
+        <h1>For people who have little to no time</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="desayunos.html">Desayunos</a></li>
+            <li><a href="comidas.html">Comidas</a></li>
+            <li><a href="cenas.html">Cenas</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="recipes_en.html">English Recipes</a></li>
+            <li><a href="api.html">Recetas de otros usuarios</a></li>
+        </ul>
+    </nav>
+
+    <section id="intro">
+        <h2>Explore More Recipes</h2>
+        <p>
+            We also have recipes available for English-speaking users! 🍽️  
+            Click the button below to generate as many random recipes as you like and explore delicious meal ideas.  
+            Whether you're looking for a quick breakfast, a tasty lunch, or a special dinner,  
+            our recipe generator has something for everyone. Enjoy cooking! 👨‍🍳✨
+        </p>
+        
+    </section>
+    
+    <section id="recetas">
+        <h2>Random Recipes</h2>
+        <div id="receta-container-en" style="font-family: 'Poppins', sans-serif; font-size: 16px; line-height: 1.6; color: #333;">
+            <p>Loading recipe...</p>
+        </div>
+        <button onclick="obtenerRecetaAleatoria()">🔄 New Recipe</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Quick Recipes | <a href="contact.html">Contact Us</a></p>
+    </footer>
+
+    <script src="scripts.js"></script>
+
+</body>
+</html>

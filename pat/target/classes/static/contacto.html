@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Contacto</h1>
+    </header>
+    <nav>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="desayunos.html">Desayunos</a></li>
+                <li><a href="comidas.html">Comidas</a></li>
+                <li><a href="cenas.html">Cenas</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="recipes_en.html">English Recipes</a></li>
+                <li><a href="api.html">Recetas de otros usuarios</a></li>
+            </ul>
+        </nav>
+    </nav>
+    <section>
+        <h2>Contáctanos</h2>
+        <p>Si tienes alguna sugerencia o consulta, no dudes en escribirnos.</p>
+        <form id="contact-form">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+        
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+        
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+        
+            <button type="submit">Enviar</button>
+        </form>
+        
+        <script>
+            document.getElementById("contact-form").addEventListener("submit", function(event) {
+                event.preventDefault(); 
+                window.location.href = "error.html"; 
+            });
+        </script>
+        
+    </section>
+
+
+    <footer>
+        <p>&copy; 2025 Recetas Rápidas | <a href="index.html">Volver al inicio</a></p>
+    </footer>
+</body>
+</html>
