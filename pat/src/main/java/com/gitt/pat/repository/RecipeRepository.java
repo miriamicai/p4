@@ -12,14 +12,12 @@ public class RecipeRepository {
     private final Map<Long, Recipe> recipes = new HashMap<>();
     private Long nextId = 1L;
 
-    // Crear y guardar una receta
     public Recipe save(Recipe recipe) {
         recipe.setId(nextId++);
         recipes.put(recipe.getId(), recipe);
         return recipe;
     }
 
-    // Actualizar una receta existente
     public Optional<Recipe> update(Long id, Recipe updated) {
         if (recipes.containsKey(id)) {
             updated.setId(id);
@@ -29,22 +27,18 @@ public class RecipeRepository {
         return Optional.empty();
     }
 
-    // Devolver todas las recetas
     public List<Recipe> findAll() {
         return new ArrayList<>(recipes.values());
     }
 
-    // Buscar por ID
     public Optional<Recipe> findById(Long id) {
         return Optional.ofNullable(recipes.get(id));
     }
 
-    // Eliminar por ID
     public boolean deleteById(Long id) {
         return recipes.remove(id) != null;
     }
 
-    // Datos de prueba precargados
     @PostConstruct
     public void initData() {
         save(new Recipe(null, "Tortitas de avena", "Una opción saludable con plátano, avena y huevo."));
